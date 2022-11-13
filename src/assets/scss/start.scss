@@ -1,0 +1,17 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  &__inner {
+    text-align: center;
+  }
+}
+.player-name {
+  &__text {
+
+  }
+  &__name {
+    border: solid 2px;
+  }
+}

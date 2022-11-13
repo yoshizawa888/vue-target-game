@@ -1,0 +1,19 @@
+.wrap {
+  padding: 15px;
+  text-align: center;
+}
+.result {
+  &__text {
+
+  }
+}
+.result-list {
+  margin: 20px 0;
+  border-top: solid 2px;
+  &__item {
+    padding: 10px;
+    &:nth-child(even) {
+      background: #f0f0f0;
+    }
+  }
+}

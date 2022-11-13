@@ -1,0 +1,19 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.status {
+  padding: 15px;
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__text {
+    line-height: 1.8;
+  }
+}
+.filed {
+  position: relative;
+  flex: 1;
+}

@@ -8,7 +8,6 @@
   }
 }
 .result-list {
-  margin: 20px 0;
   border-top: solid 2px;
   &__item {
     padding: 10px;
@@ -16,4 +15,13 @@
       background: #f0f0f0;
     }
   }
+}
+.fade-enter-from {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: all 0.5s ease;
+}
+.fade-enter-to {
+  opacity: 1;
 }

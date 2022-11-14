@@ -26,6 +26,10 @@ import Target1 from '../components/GameTarget1.vue'
       }
     },
     mounted() {
+      if (!this.$store.getters.name) {
+        this.$router.push('/')
+        return
+      }
       let timer = setInterval(() => {
         this.timeLeft(this.time)
         if(this.time <= 0) {
@@ -52,9 +56,6 @@ import Target1 from '../components/GameTarget1.vue'
         }
         this.time = time
       },
-      test() {
-        this.$store.dispatch('statusPost')
-      }
     }
   }
 </script>

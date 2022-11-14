@@ -22,27 +22,27 @@ export default {
     }
   },
   // beforeRouteLeave (to, from, next) {
-  //   this.$store.commit('reset');
-  //   console.log(to);
-  //   next('/');
+  //   this.$store.commit('reset')
+  //   console.log(to)
+  //   next('/')
   // },
   async created() {
-    await this.$store.dispatch('resultList');
-    this.$store.commit('ranking');
-    this.results = this.$store.state.results;
+    await this.$store.dispatch('resultList')
+    this.$store.commit('ranking')
+    this.results = this.$store.getters.results
   },
   computed: {
     showName() {
-      return this.$store.getters.name;
+      return this.$store.state.name
     },
     showScore() {
-      return this.$store.state.score;
+      return this.$store.state.score
     }
   },
   // watch: {
   //   $route() {
-  //     console.log('watch');
-  //     this.$store.commit('reset');
+  //     console.log('watch')
+  //     this.$store.commit('reset')
   //   }
   // }
 }

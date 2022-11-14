@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Start from './views/StartPage';
-import Game from './views/GameScreen';
-import Result from './views/ResultList';
+import Start from './views/StartPage'
+import Game from './views/GameScreen'
+import Result from './views/ResultList'
 
 const routes = [
   {
@@ -19,11 +19,11 @@ const routes = [
     name: 'result',
     component: Result
   }
-];
+]
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
-});
+})
 
-export default router;
+export default router

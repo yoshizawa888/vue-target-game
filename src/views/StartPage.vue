@@ -20,11 +20,11 @@ export default {
     }
   },
   created() {
-    this.$store.commit('reset');
+    this.$store.commit('reset')
   },
   methods: {
     start() {
-      this.$store.commit('playerName', this.name);
+      this.$store.commit('playerName', this.name)
     }
   }
 }

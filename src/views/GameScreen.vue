@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Target1 from '../components/GameTarget1.vue';
+import Target1 from '../components/GameTarget1.vue'
   export default {
     components: {
       Target1
@@ -27,33 +27,33 @@ import Target1 from '../components/GameTarget1.vue';
     },
     mounted() {
       let timer = setInterval(() => {
-        this.timeLeft(this.time);
+        this.timeLeft(this.time)
         if(this.time <= 0) {
-          clearInterval(timer);
-          this.$store.dispatch('statusPost');
-          this.$router.push('/result');
+          clearInterval(timer)
+          this.$store.dispatch('statusPost')
+          this.$router.push('/result')
         }
-      }, 1000);
+      }, 1000)
     },
     computed: {
       showName() {
-        return this.$store.getters.name;
+        return this.$store.state.name
       },
       showScore() {
-        return this.$store.getters.score;
+        return this.$store.state.score
       }
     },
     methods: {
       timeLeft(time) {
         if(time > 0) {
-          time--;
+          time--
         } else {
-          return;
+          return
         }
-        this.time = time;
+        this.time = time
       },
       test() {
-        this.$store.dispatch('statusPost');
+        this.$store.dispatch('statusPost')
       }
     }
   }

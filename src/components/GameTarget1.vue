@@ -5,20 +5,20 @@
 <script>
 export default {
   mounted() {
-    this.randTarget();
+    this.randTarget()
   },
   methods: {
     hitTarget() {
-      this.$store.commit('updateScore');
-      this.randTarget();
+      this.$store.commit('updateScore')
+      this.randTarget()
     },
     randTarget() {
-      let target = document.getElementsByClassName('target');
-      let vertical = Math.floor(Math.random() * 100);
-      let horizontal = Math.floor(Math.random() * 100);
-      target[0].style.position = 'absolute';
-      target[0].style.top  = vertical + '%';
-      target[0].style.left = horizontal + '%';
+      let target = document.getElementsByClassName('target')
+      let vertical = Math.floor(Math.random() * 100)
+      let horizontal = Math.floor(Math.random() * 100)
+      target[0].style.position = 'absolute'
+      target[0].style.top  = vertical + '%'
+      target[0].style.left = horizontal + '%'
     }
   }
 }

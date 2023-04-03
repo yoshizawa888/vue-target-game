@@ -28,8 +28,6 @@ export default {
 		next();
 	},
 	created() {
-		this.$store.dispatch('resultList');
-		this.$store.commit('ranking');
 		this.results = this.$store.getters.results;
 	},
 	computed: {

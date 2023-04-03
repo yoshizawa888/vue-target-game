@@ -35,7 +35,11 @@ export default {
 			if (this.time <= 0) {
 				clearInterval(timer);
 				this.$store.dispatch('statusPost');
-				this.$router.push('/result');
+				this.$store.dispatch('resultList');
+				setTimeout(() => {
+					this.$store.commit('ranking');
+					this.$router.push('/result');
+				}, 200);
 			}
 		}, 1000);
 	},

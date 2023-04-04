@@ -39,7 +39,7 @@ export default {
 				setTimeout(() => {
 					this.$store.commit('ranking');
 					this.$router.push('/result');
-				}, 200);
+				}, 300);
 			}
 		}, 1000);
 	},
